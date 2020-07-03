@@ -1,0 +1,11 @@
+<div class="user-card">
+  <div>
+    <h3>{{user.username}}</h3>
+    <span>{{user.name}} - {{user.email}}</span>
+  </div>
+  <button (click)="onClick()">{{!isOpen? 'show': 'hide'}} posts</button>
+  <div class="init" [class.show]="isOpen">
+<app-post *ngFor="let post of posts" [post]="post"
+></app-post>
+  </div>
+</div>

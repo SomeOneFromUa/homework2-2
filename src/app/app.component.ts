@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {IUser} from '../modules/userModule';
+import {UserService} from '../services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'homework2dot2';
+ users: IUser[];
+ constructor(private userService: UserService) {
+   this.userService.getUsers().subscribe(value => this.users = value);
+ }
 }

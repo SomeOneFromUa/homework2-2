@@ -1,0 +1,9 @@
+<div class="post-card">
+  <h4>{{post.title}}</h4>
+  <p>{{post.body}}</p>
+  <button (click)="onClick()">{{!isOpen? 'show': 'hide'}} comments</button>
+  <div class="init" [class.show]="isOpen">
+    <app-comment *ngFor="let comment of comments" [comment]="comment"
+    ></app-comment>
+  </div>
+</div>

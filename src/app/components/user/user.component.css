@@ -1,0 +1,12 @@
+.init {
+  display: none;
+}
+.show {
+  display: block;
+}
+.user-card {
+  width: 50%;
+  padding: 10px;
+  border: lightslategrey solid 1px;
+  margin: 5px;
+}
