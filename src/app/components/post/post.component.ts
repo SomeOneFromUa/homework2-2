@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IPost} from '../../../modules/postModule';
-import {IComments} from '../../../modules/commentsModule';
-import {UserService} from '../../../services/user.service';
+import {IPost} from '../../interfaces/post';
+import {IComments} from '../../interfaces/comment';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-post',
