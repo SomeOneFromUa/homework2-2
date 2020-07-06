@@ -8,4 +8,9 @@
 <app-post *ngFor="let post of posts" [post]="post"
 ></app-post>
   </div>
+  <button (click)="onAlbumsClick()">{{!isOpen? 'show': 'hide'}} albums</button>
+  <div class="init" [class.show]="AlbumDisable">
+<app-album *ngFor="let album of albums"  [album]="album"
+></app-album>
+  </div>
 </div>
